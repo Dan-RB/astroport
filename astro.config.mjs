@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://dan-rb.github.io',
-  base: ''
+  base: '/astroport'
 });
