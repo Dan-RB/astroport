@@ -1,0 +1,315 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Item from '../components/Item.astro';
+import Header from '../components/Header.astro';
+import Carousel from '../components/Carousel.astro';
+
+import { Image } from 'astro:assets';
+import img1 from '/src/img/01.jpg'
+import img2 from '/src/img/02.jpg'
+import img3 from '/src/img/03.jpg'
+---
+
+<Layout title="Portafolio">
+	<main>
+		<Header />
+		<Carousel 
+			title="Trabajos Personales"
+			body="Suelo trabajar solo, pero frecuentemente recibo ayuda de familiares y amigos."
+			imagePath='/src/img/slide/01.jpg'
+		/>
+
+		<div id="about" class="scroll-m-20">
+			<div class="grid grid-cols-3 gap-x-20 px-4">
+                {/* Títulos */}
+				<div>
+					<h2>
+						Identidad
+					</h2>
+				</div>
+				<div>
+					<h2>
+						Objetivo
+					</h2>
+				</div>
+				<div>
+					<h2>
+						Futuro
+					</h2>
+				</div>
+				{/* Contenido */}
+				<div>
+					<p class="text-base font-hind leading-normal mb-4 text-gray-400 text-balance text-center">
+						Soy un estudiante mexicano de Ingeniería en Computación, a pesar del ángulo técnico siempre me han interesado las artes.
+					</p> 
+				</div>
+				<div>	
+					<p class="text-base font-hind leading-normal mb-4 text-gray-400 text-balance text-center">
+						Localizo cosas por gusto, siempre con la intención de permitir que personas que no conozcan el idioma puedan disfrutar del contenido.
+					</p>
+				</div>
+				<div>
+					<p class="text-base font-hind leading-normal mb-4 text-gray-400 text-balance text-center">
+						Aunque siempre lo he hecho de manera gratuita, no estoy en contra de algún día traducir por dinero, especialmente si fuera un proyecto pequeño.
+					</p>
+				</div>
+				{/* Imágenes */}
+				<div>
+					<Image src={img1} alt="Imágen de Portafolio" width="360"/>
+				</div>
+				<div>
+					<Image src={img2} alt="Imágen de Portafolio" width="360"/>
+				</div>
+				<div>
+					<Image src={img3} alt="Imágen de Portafolio" width="360"/>
+				</div>
+			</div>
+		</div>
+
+		<div id="games" class="scroll-m-24">
+			<h2 class="text-3xl font-bold font-hind leading-normal m-4 text-gray-700">
+				Videojuegos
+			</h2>
+			<p class="text-base font-hind leading-normal mb-4 text-gray-400">
+				He colaborado en dos proyectos de traducción de videojuegos.
+			</p>
+
+			<ul role="list" class="item-card-grid">
+				<Item
+					imagePath='/src/img/thumbnails/01.jpg'	
+					title="Another Metroid 2 Remake"
+					body="Un parche creado para la última versión oficial de AM2R. En la actualidad existen traducciones más populares."
+					href="http://www.mediafire.com/file/hcppci8mx5exh57/Espa%F1olLat.rar"
+					nature="PARCHE"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/02.jpg'	
+					title="A Hat in Time"
+					body="Esta es la única vez que he participado oficialmente en un equipo hasta ahora. Por un largo tiempo se puso en pausa el proyecto y abandoné el grupo; desconozco si utilizaron mis aportaciones al final."
+					href="https://steamcommunity.com/sharedfiles/filedetails/?id=1241514514&searchtext=spanish"
+					nature="MOD"
+				/>
+			</ul>
+		</div>
+
+		<div id="youtube" class="scroll-m-24">
+			<h2>
+				YouTube
+			</h2>
+			<p class="text-base font-hind leading-normal mb-4 text-gray-400 text-balance">
+				Mi mayor cantidad de aportaciones se encuentran en Youtube. Yo no subo ediciones subtituladas, 
+				si no que prefiero crearlas en la misma plataforma para que puedan ser disfrutadas en el video original.
+			</p>
+			
+			<h3>
+				U M A M I
+			</h3>
+			<p class="text-base font-hind leading-normal mb-4 text-gray-400 text-balance">
+				Animador canadiense conocido por su arte surrealista y humor absurdo. Lo conozco desde sus inicios y 
+				he localizado al español latino casi todos sus videos, por eso esta lista no es absoluta.
+			</p>
+
+			<ul role="list" class="item-card-grid">
+				<Item
+					imagePath='/src/img/thumbnails/03.jpg'	
+					title="Interface"
+					body="Un hombre se encuentra con un extraño ser. Esta serie la traduje por completo, y también adapté mi trabajo a las compilaciones."
+					href="https://youtube.com/playlist?list=PLPnjato8iGXLQbppBPhOny8XLSRl7S5pM&si=WFVLeRomjXw4jgcT"
+					nature="SERIE"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/04.jpg'	
+					title="Safe Mode"
+					body="La simulación en la que la humanidad ahora vive es fozada a entrar en el Modo Seguro. He localizado esta serie hasta el episodio 5."
+					href="https://youtube.com/playlist?list=PLPnjato8iGXLx0oYSK_GO4EfbSjFdD_i-&si=-oAK_DRDttenFFti"
+					nature="SERIE"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/05.jpg'	
+					title="Pong"
+					body="Pensamientos de la pelota en Pong."
+					href="https://youtu.be/Cu6wlaaf-ck?si=WRQhYqvbmuP9FZtk"
+					nature="VIDEO"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/06.jpg'	
+					title="The End of an Era"
+					body="Exageración del efecto mariposa."
+					href="https://youtu.be/5HvrySwhZrQ?si=c00VVuBXEqYdG9_7"
+					nature="VIDEO"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/07.jpg'	
+					title="Stranger Danger"
+					body="Un encuentro familiar."
+					href="https://youtu.be/rqeWKuwy6XM?si=p34tZS-mL98_C-lG"
+					nature="VIDEO"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/08.jpg'	
+					title="The Cycle of Life"
+					body="La sopa regresa con otra premonición."
+					href="https://youtu.be/uraG-z0grkc?si=oVjnaK5NLA3X0G5f"
+					nature="VIDEO"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/09.jpg'	
+					title="A Striking Ball "
+					body="Una bola de bolos curiosa."
+					href="https://youtu.be/FdmkApuUfu8?si=mpI6q8d8cN7DPaMk"
+					nature="VIDEO"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/10.jpg'	
+					title="Chimney Alfonzo"
+					body="La aventura para liberar a un pobre de su pequeña prisión."
+					href="https://youtu.be/w4FK85SuwDo?si=vl7wRe0p9PyfOegj"
+					nature="VIDEO AVENTURA"
+				/>
+				<Item
+					imagePath='/src/img/thumbnails/11.jpg'	
+					title="Just Transition"
+					body="Un robot comete un asalto."
+					href="https://youtu.be/-mrVtRgbpAY?si=7JkJpjwRei6wT_dS"
+					nature="VIDEO"
+				/>
+			</ul>
+
+			<h3>
+				Misceláneo
+			</h3>
+			<p class="text-base font-hind leading-normal mb-4 text-gray-400 text-balance">
+				A decir verdad, ya casi no recuerdo nada de lo que hice en la época que YouTube te permitía modificar 
+				subtítulos sin permiso. Para más detalles leer el apartado de Proyectos Perdidos.
+			</p>
+
+			<ul role="list" class="item-card-grid">
+				<Item
+					imagePath='/src/img/thumbnails/12.jpg'	
+					title="Beta64 - Rhythm Tengoku / Rhythm Heaven GBA "
+					body="Historia del juego que originó a la franquicia Rhythm Heaven."
+					href="https://youtu.be/zzTEMWceK28?si=oEN2K9XywSE1-Irn"
+					nature="VIDEO"
+				/>
+			</ul>
+		</div>
+		
+		<div id="lost" class="scroll-m-24">
+			<h2>
+				Proyectos y Oportunidades Perdidas
+			</h2>
+			<p class="text-base font-hind leading-normal mb-4 text-gray-400 text-pretty max-w-fit">
+				A lo largo de los años he tenido la oportunidad de trabajar en varios proyectos satisfactorios, pero lo 
+				que quiero resaltar es que los trabajos en este portafolio posiblemente no son todos los que he hecho a 
+				lo largo de los años.
+				</br>Hace años YouTube permitía a la comunidad trabajar en los subtítulos de básicamente cualquier 
+				video en la plataforma, esta función te daba una lista comprensiva de todas tus aportaciones; tal lista 
+				ha sido eliminada, u ofuscada pues no la encontré, al igual que la función de aportaciones libres. Es 
+				por esto que no puedo saber con certeza todo lo que he hecho.
+			</p>
+			<p class="text-base font-hind leading-normal mb-4 text-gray-400 text-pretty max-w-fit">
+				En ocaciones tuve la intención de trabajar en algún video pero al final no hacía nada, o simplemente no 
+				obtuve acceso.
+				Menciono esto pues hay una posibilidad no nula que haya localizado algún video de los siguientes 
+				creadores (pueden ver la siguiente lista como recomendaciones de creadores interesantes también); 
+				Ejemplos de tales casos son: Jack Stauber, Worthykids, Team FourStar, Beta64, LEMMiNO, Vsauce & Vsauce3.
+			</p>
+		</div>
+
+		<footer class="p-5 border-t-2 border-gray-200">
+			<div class="grid grid-col-2 grid-flow-col gap-4">
+				<div class="col-xs-6">
+					<img class="inline-block align-middle" src="/src/img/legal/logo-dark.png" alt="Portafolio Logo" width=120px>
+				</div>
+				<div>
+					<p class="col-xs-6 text-right text-base text-gray-400 font-bold">
+						<a class="hover:text-gray-500" href="#">Portafolio de Traducciones</a>
+					</p>
+				</div>
+            </div>
+        </footer>
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 0rem;
+		width: 100%;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	h2 {
+		font-size: 1.875rem;
+		font-weight: bold;
+		font-family: Hind;
+		line-height: 2.25rem;
+		margin: 1rem;
+		color: rgb(55 65 81);
+	}
+	h3 {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		font-weight: bold;
+		font-family: sans-serif;;
+		margin: 1rem;
+		color: rgb(55 65 81);
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.item-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 26rem));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
